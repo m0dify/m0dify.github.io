@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 import ProjectCard from './components/ProjectCard';
 import GoogleAnalytics from './components/GoogleAnalytics';
-import SimpleCounter from './components/SimpleCounter';
+import RealAnalyticsCounter from './components/RealAnalyticsCounter';
 import { projects } from './data/projects';
 import { Project } from './types';
 import { useGoogleAnalytics } from './hooks/useGoogleAnalytics';
@@ -32,7 +32,7 @@ const App: React.FC = () => {
       
       <main className="main">
         <section className="projects">
-          <SimpleCounter />
+          <RealAnalyticsCounter />
           <div className="project-grid">
             {projects.map((project: Project) => (
               <ProjectCard 
