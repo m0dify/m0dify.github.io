@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import ProjectCard from './components/ProjectCard';
 import GoogleAnalytics from './components/GoogleAnalytics';
+import SimpleCounter from './components/SimpleCounter';
 import { projects } from './data/projects';
 import { Project } from './types';
 import { useGoogleAnalytics } from './hooks/useGoogleAnalytics';
@@ -22,8 +23,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      {/* Google Analytics 컴포넌트 */}
-      <GoogleAnalytics measurementId={measurementId} />
+      <GoogleAnalytics />
       
       <header className="header">
         <h1>M0dify's Portfolio</h1>
@@ -44,6 +44,7 @@ const App: React.FC = () => {
           </div>
         </section>
       </main>
+      <SimpleCounter />
     </div>
   );
 };

@@ -1,0 +1,59 @@
+/* src/components/SimpleCounter.css */
+.simple-counter {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 1000;
+}
+
+.counter-stats {
+  display: flex;
+  gap: 15px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 70px;
+}
+
+.stat-icon {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .simple-counter {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: 20px auto;
+    width: fit-content;
+  }
+  
+  .counter-stats {
+    gap: 20px;
+  }
+}

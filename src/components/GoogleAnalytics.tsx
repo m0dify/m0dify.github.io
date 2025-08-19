@@ -8,12 +8,15 @@ declare global {
   }
 }
 
-interface GoogleAnalyticsProps {
-  measurementId: string;
-}
+const GoogleAnalytics: React.FC = () => {
+  const measurementId = process.env.REACT_APP_GA_MEASUREMENT_ID;
 
-const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({ measurementId }) => {
   useEffect(() => {
+    if (!measurementId) {
+      console.warn('Google Analytics Measurement ID가 설정되지 않았습니다.');
+      return;
+    }
+
     // Google Analytics 스크립트 로드
     const script1 = document.createElement('script');
     script1.async = true;
@@ -27,8 +30,6 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({ measurementId }) => {
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', '${measurementId}', {
-        page_title: document.title,
-        page_location: window.location.href,
         send_page_view: true
       });
     `;
@@ -41,7 +42,7 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({ measurementId }) => {
     };
 
     return () => {
-      // 컴포넌트 언마운트 시 스크립트 제거
+      // 컴포넌트 언마운트 시 정리
       if (document.head.contains(script1)) {
         document.head.removeChild(script1);
       }
