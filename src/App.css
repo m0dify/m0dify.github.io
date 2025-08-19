@@ -1,0 +1,117 @@
+.App {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-header h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.project-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.technologies {
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  display: inline-block;
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.project-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+}
+
+.visitor-counter {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
