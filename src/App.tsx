@@ -32,7 +32,7 @@ const App: React.FC = () => {
       
       <main className="main">
         <section className="projects">
-          <h2>프로젝트</h2>
+          <SimpleCounter />
           <div className="project-grid">
             {projects.map((project: Project) => (
               <ProjectCard 
@@ -44,7 +44,6 @@ const App: React.FC = () => {
           </div>
         </section>
       </main>
-      <SimpleCounter />
     </div>
   );
 };
